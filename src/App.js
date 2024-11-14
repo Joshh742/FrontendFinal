@@ -12,6 +12,7 @@ function App() {
         <Header />
         <Section />
         <Hero />
+        <Footer />
         <footer className="iq-bg-dark">
           <div className="footer-top">
             <div className="container-fluid">
