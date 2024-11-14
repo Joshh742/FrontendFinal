@@ -9,12 +9,8 @@ function App() {
     <div className="App">
       <div>
         <Header />
-        {/* slider starts  */}
         <Section />
-        {/* slider ends */}
-        {/* main content starts  */}
         <Hero />
-        {/* main content ends  */}
         <footer className="iq-bg-dark">
           <div className="footer-top">
             <div className="container-fluid">
