@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -13,11 +14,7 @@ function App() {
         <Section />
         <Hero />
         <Footer />
-        <i>
-          <i>
-            <i></i>
-          </i>
-        </i>
+        <Menu />
       </div>
     </div>
   );
