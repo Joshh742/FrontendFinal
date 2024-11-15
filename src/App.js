@@ -13,11 +13,6 @@ function App() {
         <Section />
         <Hero />
         <Footer />
-        <i>
-          <i>
-            <i></i>
-          </i>
-        </i>
       </div>
     </div>
   );
