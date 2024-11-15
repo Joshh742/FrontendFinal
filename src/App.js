@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -13,11 +12,6 @@ function App() {
         <Section />
         <Hero />
         <Footer />
-        <i>
-          <i>
-            <i></i>
-          </i>
-        </i>
       </div>
     </div>
   );
