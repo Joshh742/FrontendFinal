@@ -14,8 +14,6 @@ function App() {
         <Section />
         <Hero />
         <Footer />
-        <Menu />
-        <MobileMenu />
         <i>
           <i>
             <i></i>
