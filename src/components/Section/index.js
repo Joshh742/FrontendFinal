@@ -1,4 +1,25 @@
+import React, { useState, useEffect } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 const Section = () => {
+  const [images, setImages] = useState({});
+  const [imageBase64, setImageBase64] = useState("");
+
+  useEffect(() => {
+    const database = getDatabase();
+    const imageRef = ref(database, "Image");
+
+    onValue(imageRef, (snapshot) => {
+      const data = snapshot.val();
+      setImages(data || {});
+
+      if (data) {
+        const firstImage = Object.values(data)[0];
+        setImageBase64(firstImage);
+      }
+    });
+  }, []);
+
   return (
     <section id="home" className="iq-main-slider p-0">
       <div id="home-slider" className="slider m-0 p-0">
@@ -13,7 +34,15 @@ const Section = () => {
                       data-animation-in="fadeInLeft"
                       data-delay-in="0.5"
                     >
-                      <img src="images/logo.png" className="c-logo" alt />
+                      {imageBase64 ? (
+                        <img
+                          className="img-fluid w-100 rounded-circle shadow-sm"
+                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          alt="Image from Firebase"
+                        />
+                      ) : (
+                        <div className="text-white">Loading image...</div>
+                      )}
                     </div>
                   </a>
                   <h1
@@ -115,7 +144,15 @@ const Section = () => {
                       data-animation-in="fadeInLeft"
                       data-delay-in="0.5"
                     >
-                      <img src="images/logo.png" className="c-logo" alt />
+                      {imageBase64 ? (
+                        <img
+                          className="img-fluid w-100 rounded-circle shadow-sm"
+                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          alt="Image from Firebase"
+                        />
+                      ) : (
+                        <div className="text-white">Loading image...</div>
+                      )}
                     </div>
                   </a>
                   <h1
@@ -218,7 +255,15 @@ const Section = () => {
                       data-animation-in="fadeInLeft"
                       data-delay-in="0.5"
                     >
-                      <img src="images/logo.png" className="c-logo" alt />
+                      {imageBase64 ? (
+                        <img
+                          className="img-fluid w-100 rounded-circle shadow-sm"
+                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          alt="Image from Firebase"
+                        />
+                      ) : (
+                        <div className="text-white">Loading image...</div>
+                      )}
                     </div>
                   </a>
                   <h1
