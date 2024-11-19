@@ -1492,7 +1492,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -1575,7 +1575,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -1770,7 +1770,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -1948,7 +1948,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -2191,7 +2191,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -2276,7 +2276,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -2477,7 +2477,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -2655,7 +2655,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -2898,7 +2898,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -2983,7 +2983,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -3178,7 +3178,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -3356,7 +3356,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -3599,7 +3599,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -3684,7 +3684,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -3879,7 +3879,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -4057,7 +4057,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -4300,7 +4300,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -4386,7 +4386,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -4581,7 +4581,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -4759,7 +4759,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -5002,7 +5002,7 @@ const Hero = () => {
                                 <div className="res-logo">
                                   <div className="channel-logo">
                                     <img
-                                      src="images/logo.png"
+                                      src="images/XXI.png"
                                       className="c-logo"
                                       alt
                                     />
@@ -5086,7 +5086,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -5277,7 +5277,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />
@@ -5455,7 +5455,7 @@ const Hero = () => {
                               <a href="#" tabIndex={0}>
                                 <div className="channel-logo">
                                   <img
-                                    src="images/logo.png"
+                                    src="images/XXI.png"
                                     className="c-logo"
                                     alt
                                   />

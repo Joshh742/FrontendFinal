@@ -25,7 +25,7 @@ const Header = () => {
                   </div>
                 </a>
                 <a href="index.html" className="navbar-brand">
-                  <img src="images/logo.png" className="img-fluid logo" alt />
+                  <img src="images/XXI.png" className="img-fluid logo" alt />
                 </a>
                 <div
                   className="collapse navbar-collapse"
