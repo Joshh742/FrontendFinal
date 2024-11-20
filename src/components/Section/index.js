@@ -51,7 +51,7 @@ const Section = () => {
                       {imageBase64 ? (
                         <img
                           className="img-fluid w-100 rounded-circle shadow-sm"
-                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          src={`data:image/jpeg;base64,${images.Logo}`}
                           alt="Image from Firebase"
                         />
                       ) : (
@@ -151,7 +151,7 @@ const Section = () => {
                       {imageBase64 ? (
                         <img
                           className="img-fluid w-100 rounded-circle shadow-sm"
-                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          src={`data:image/jpeg;base64,${images.Logo}`}
                           alt="Image from Firebase"
                         />
                       ) : (
@@ -251,7 +251,7 @@ const Section = () => {
                       {imageBase64 ? (
                         <img
                           className="img-fluid w-100 rounded-circle shadow-sm"
-                          src={`data:image/jpeg;base64,${imageBase64}`}
+                          src={`data:image/jpeg;base64,${images.Logo}`}
                           alt="Image from Firebase"
                         />
                       ) : (

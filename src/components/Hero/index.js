@@ -1,4 +1,25 @@
+import React, { useState, useEffect } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 const Hero = () => {
+  const [hero, setImages] = useState({});
+  const [imageBase64, setImageBase64] = useState("");
+
+  useEffect(() => {
+    const database = getDatabase();
+    const imageRef = ref(database, "Hero");
+
+    onValue(imageRef, (snapshot) => {
+      const data = snapshot.val();
+      setImages(data || {});
+
+      if (data) {
+        const firstImage = Object.values(data)[0];
+        setImageBase64(firstImage);
+      }
+    });
+  }, []);
+
   return (
     <div className="main-content">
       {/* favorite section starts   */}
@@ -19,9 +40,9 @@ const Hero = () => {
                     <div className="block-images position-relative">
                       <div className="img-box">
                         <img
-                          src="images/favorite/f1.jpg"
                           className="img-fluid"
-                          alt
+                          src={`data:hero/jpeg;base64,${hero.Image1}`}
+                          alt="Image from Firebase"
                         />
                       </div>
                       <div className="block-description">
@@ -81,9 +102,9 @@ const Hero = () => {
                     <div className="block-images position-relative">
                       <div className="img-box">
                         <img
-                          src="images/favorite/f2.jpg"
                           className="img-fluid"
-                          alt
+                          src={`data:hero/jpeg;base64,${hero.Image2}`}
+                          alt="Image from Firebase"
                         />
                       </div>
                       <div className="block-description">
@@ -143,9 +164,9 @@ const Hero = () => {
                     <div className="block-images position-relative">
                       <div className="img-box">
                         <img
-                          src="images/favorite/f3.jpg"
                           className="img-fluid"
-                          alt
+                          src={`data:hero/jpeg;base64,${hero.Image3}`}
+                          alt="Image from Firebase"
                         />
                       </div>
                       <div className="block-description">
@@ -205,9 +226,9 @@ const Hero = () => {
                     <div className="block-images position-relative">
                       <div className="img-box">
                         <img
-                          src="images/favorite/f4.jpg"
                           className="img-fluid"
-                          alt
+                          src={`data:hero/jpeg;base64,${hero.Image4}`}
+                          alt="Image from Firebase"
                         />
                       </div>
                       <div className="block-description">
@@ -267,9 +288,9 @@ const Hero = () => {
                     <div className="block-images position-relative">
                       <div className="img-box">
                         <img
-                          src="images/favorite/f5.jpg"
                           className="img-fluid"
-                          alt
+                          src={`data:hero/jpeg;base64,${hero.Image5}`}
+                          alt="Image from Firebase"
                         />
                       </div>
                       <div className="block-description">
