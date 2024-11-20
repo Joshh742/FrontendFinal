@@ -1,4 +1,28 @@
+import React, { useState, useEffect } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 const Parallex = () => {
+  const [Parallex, setParallex] = useState({});
+  const [imageBase64, setImageBase64] = useState("");
+
+  useEffect(() => {
+    const database = getDatabase();
+    const ParallexRef = ref(database, "Parallex");
+    
+    onValue(ParallexRef, (snapshot) => {
+      const data = snapshot.val();
+      setParallex(data || {});
+
+      if (data) {
+        const firstImage = Object.values(data)[0];
+        setImageBase64(firstImage);
+      }
+    });
+    onValue(ParallexRef, (snapshot) => {
+      const data = snapshot.val();
+      setParallex(data);
+    });
+  }, []);
   return (
     <section id="parallex" className="parallax-window">
       <div className="container-fluid h-100">
@@ -6,7 +30,7 @@ const Parallex = () => {
           <div className="col-lg-4 r-mb-23">
             <div className="text-left">
               <a href="javascript:void(0)">
-                <h1 className="parallax-heading">Avatar</h1>
+                <h1 className="parallax-heading">{Parallex.Title}</h1>
               </a>
               <div className="parallax-ratting d-flex align-items-center mt-3 mb-3">
                 <ul className="ratting-start p-o m-0 list-inline text-primary d-flex align-items-center justify-content-left">
@@ -43,9 +67,7 @@ const Parallex = () => {
                 <span className="text-white">2h 42min</span>
               </div>
               <p>
-                A paraplegic Marine dispatched to the moon Pandora on a unique
-                mission becomes torn between following his orders and protecting
-                the world he feels is his home.
+              {Parallex.Sinopsis}
               </p>
               <div className="parallax-buttons">
                 <a href="#" className="btn btn-hover">
@@ -61,8 +83,8 @@ const Parallex = () => {
             <div className="parallax-img">
               <a href="#">
                 <img
-                  src="images/parallax/avatar.jpg"
-                  alt
+                 src={`data:Parallex/jpeg;base64,${Parallex.Image1}`}
+                        alt="Image from Firebase"
                   className="img-fluid w-100"
                 />
               </a>
