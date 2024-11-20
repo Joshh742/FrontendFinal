@@ -1,4 +1,24 @@
+import React, { useState, useEffect } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 const Trending = () => {
+  const [Trending, setTrending] = useState({});
+  const [imageBase64, setImageBase64] = useState("");
+
+  useEffect(() => {
+    const database = getDatabase();
+    const TrendingRef = ref(database, "Trending");
+    
+    onValue(TrendingRef, (snapshot) => {
+      const data = snapshot.val();
+      setTrending(data || {});
+
+      if (data) {
+        const firstImage = Object.values(data)[0];
+        setImageBase64(firstImage);
+      }
+    });
+  }, []);
   return (
     <section id="iq-trending" className="s-margin">
       <div className="container-fluid">
@@ -18,7 +38,6 @@ const Trending = () => {
                       <img
                         src="images/trending/01.jpg"
                         className="img-fluid"
-                        alt
                       />
                     </div>
                   </a>
@@ -87,7 +106,7 @@ const Trending = () => {
                   <div
                     className="tranding-block position-relative"
                     style={{
-                      backgroundImage: "url(images/trending/01.jpg)",
+                      backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image1})`,
                     }}
                   >
                     <div className="trending-custom-tab">
@@ -784,7 +803,7 @@ const Trending = () => {
                   <div
                     className="tranding-block position-relative"
                     style={{
-                      backgroundImage: "url(images/trending/02.jpg)",
+                      backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image2})`,
                     }}
                   >
                     <div className="trending-custom-tab">
@@ -1491,7 +1510,7 @@ const Trending = () => {
                   <div
                     className="tranding-block position-relative"
                     style={{
-                      backgroundImage: "url(images/trending/03.jpg)",
+                      backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image3})`,
                     }}
                   >
                     <div className="trending-custom-tab">
@@ -2188,7 +2207,7 @@ const Trending = () => {
                   <div
                     className="tranding-block position-relative"
                     style={{
-                      backgroundImage: "url(images/trending/04.jpg)",
+                      backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image4})`,
                     }}
                   >
                     <div className="trending-custom-tab">
@@ -2887,10 +2906,10 @@ const Trending = () => {
                 </li>
                 <li>
                   <div
-                    className="tranding-block position-relative"
-                    style={{
-                      backgroundImage: "url(images/trending/05.jpg)",
-                    }}
+                   className="tranding-block position-relative"
+                   style={{
+                     backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image5})`,
+                   }}
                   >
                     <div className="trending-custom-tab">
                       <div className="tab-title-info position-relative">
@@ -3589,7 +3608,7 @@ const Trending = () => {
                   <div
                     className="tranding-block position-relative"
                     style={{
-                      backgroundImage: "url(images/trending/06.jpg)",
+                      backgroundImage: `url(data:Trending/jpeg;base64,${Trending.Image6})`,
                     }}
                   >
                     <div className="trending-custom-tab">
