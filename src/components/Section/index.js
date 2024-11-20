@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 
 const Section = () => {
+  const [Text, setText] = useState({});
+  const [Sinopsis, setSinopsis] = useState({});
   const [images, setImages] = useState({});
   const [imageBase64, setImageBase64] = useState("");
 
   useEffect(() => {
     const database = getDatabase();
     const imageRef = ref(database, "Image");
+    const TextRef = ref(database, "Text");
+    const SinopsisRef = ref(database, "Sinopsis");
 
     onValue(imageRef, (snapshot) => {
       const data = snapshot.val();
@@ -17,6 +21,16 @@ const Section = () => {
         const firstImage = Object.values(data)[0];
         setImageBase64(firstImage);
       }
+    });
+
+    onValue(TextRef, (snapshot) => {
+      const data = snapshot.val();
+      setText(data);
+    });
+
+    onValue(SinopsisRef, (snapshot) => {
+      const data = snapshot.val();
+      setSinopsis(data);
     });
   }, []);
 
@@ -50,7 +64,7 @@ const Section = () => {
                     data-animation-in="fadeInLeft"
                     data-delay-in="0.6"
                   >
-                    Avengers
+                    {Text.Title1}
                   </h1>
                   <div
                     className="d-flex flex-wrap align-items-center fadeInLeft animated"
@@ -82,12 +96,7 @@ const Section = () => {
                       <span className="ml-3">2h 21min</span>
                     </div>
                   </div>
-                  <p data-animation-in="fadeInUp">
-                    When Tony Stark and Bruce Banner try to jump-start a dormant
-                    peacekeeping program called Ultron, things go horribly wrong
-                    and it's up to Earth's nightest heroes to stop the
-                    villainous Ultron from enacting his terrible plan.
-                  </p>
+                  <p data-animation-in="fadeInUp">{Sinopsis.Sinopsis1}</p>
                   <div
                     className="trending-list"
                     data-animation-in="fadeInUp"
@@ -95,18 +104,13 @@ const Section = () => {
                   >
                     <div className="text-primary title starring">
                       Starring :
-                      <span className="text-body">
-                        Robert Downey Jr., Chris Evans, Mark Ruffalo
-                      </span>
+                      <span className="text-body">{Text.Starring1}</span>
                     </div>
                     <div className="text-primary title genres">
-                      Genres : <span className="text-body">Action</span>
+                      Genres : <span className="text-body">{Text.Genres1}</span>
                     </div>
                     <div className="text-primary title tag">
-                      Tags :
-                      <span className="text-body">
-                        Action, Adventure, Horror
-                      </span>
+                      Tags :<span className="text-body">{Text.Tags1}</span>
                     </div>
                   </div>
                   <div
@@ -160,7 +164,7 @@ const Section = () => {
                     data-animation-in="fadeInLeft"
                     data-delay-in="0.6"
                   >
-                    Frozen
+                    {Text.Title2}
                   </h1>
                   <div
                     className="d-flex flex-wrap align-items-center fadeInLeft animated"
@@ -192,13 +196,7 @@ const Section = () => {
                       <span className="ml-3">1h 42min</span>
                     </div>
                   </div>
-                  <p data-animation-in="fadeInUp">
-                    When the newly crowned Queen Elsa accidentally uses her
-                    power to turn things into ice to curse her home in infinte
-                    winter, her sister Anna teams up with a mountain man, his
-                    playful reindeer, and a snowman to change the weather
-                    condition.
-                  </p>
+                  <p data-animation-in="fadeInUp">{Sinopsis.Sinopsis2}</p>
                   <div
                     className="trending-list"
                     data-animation-in="fadeInUp"
@@ -206,18 +204,13 @@ const Section = () => {
                   >
                     <div className="text-primary title starring">
                       Starring :
-                      <span className="text-body">
-                        Kristan Bell, Idina menzel, Jonathan Groff
-                      </span>
+                      <span className="text-body">{Text.Starring2}</span>
                     </div>
                     <div className="text-primary title genres">
-                      Genres : <span className="text-body">Animation</span>
+                      Genres : <span className="text-body">{Text.Genres2}</span>
                     </div>
                     <div className="text-primary title tag">
-                      Tags :
-                      <span className="text-body">
-                        Animation, Adventure, Comedy
-                      </span>
+                      Tags :<span className="text-body">{Text.Tags2}</span>
                     </div>
                   </div>
                   <div
@@ -271,7 +264,7 @@ const Section = () => {
                     data-animation-in="fadeInLeft"
                     data-delay-in="0.6"
                   >
-                    The Conjuring
+                    {Text.Title3}
                   </h1>
                   <div
                     className="d-flex flex-wrap align-items-center fadeInLeft animated"
@@ -303,10 +296,7 @@ const Section = () => {
                       <span className="ml-3">1h 52min</span>
                     </div>
                   </div>
-                  <p data-animation-in="fadeInUp">
-                    Paranomal investigators Ed and Lorraine Warren work to help
-                    a family terrorized by a dark presence in their farmhouse.
-                  </p>
+                  <p data-animation-in="fadeInUp">{Sinopsis.Sinopsis3}</p>
                   <div
                     className="trending-list"
                     data-animation-in="fadeInUp"
@@ -314,18 +304,13 @@ const Section = () => {
                   >
                     <div className="text-primary title starring">
                       Starring :
-                      <span className="text-body">
-                        Patrick Wilson, Vera Farminga, Ron Livingston
-                      </span>
+                      <span className="text-body">{Text.Starring3}</span>
                     </div>
                     <div className="text-primary title genres">
-                      Genres : <span className="text-body">Horror</span>
+                      Genres : <span className="text-body">{Text.Genres3}</span>
                     </div>
                     <div className="text-primary title tag">
-                      Tags :
-                      <span className="text-body">
-                        Horror, Mystery, Thriller
-                      </span>
+                      Tags :<span className="text-body">{Text.Tags3}</span>
                     </div>
                   </div>
                   <div
