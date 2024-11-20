@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import TopPicks from "../TopPicks";
 import PopularMovies from "../PopularMovies/Index";
 import TrendingMovies from "../TrendingMovies";
